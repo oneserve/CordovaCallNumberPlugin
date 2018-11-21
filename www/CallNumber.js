@@ -1,11 +1,15 @@
 var CallNumber = function(){};
 
-CallNumber.prototype.callNumber = function(success, failure, number, bypassAppChooser){
-    cordova.exec(success, failure, "CallNumber", "callNumber", [number, bypassAppChooser]);
+CallNumber.prototype.callNumber = function(number, bypassAppChooser) {
+    return new Promise(function() {
+        cordova.exec(resolve, reject, "CallNumber", "callNumber", [number, bypassAppChooser]);
+    });
 };
 
-CallNumber.prototype.isCallSupported = function(success, failure){
-    cordova.exec(success, failure, "CallNumber", "isCallSupported");
+CallNumber.prototype.isCallSupported = function() {
+    return new Promise(function(resolve, reject) {
+        cordova.exec(resolve, reject, "CallNumber", "isCallSupported");
+    });
 }
 
 //Plug in to Cordova
@@ -18,3 +22,5 @@ cordova.addConstructor(function() {
     if(!window.plugins) window.plugins = {};
     window.plugins.CallNumber = new CallNumber();
 });
+
+export { CallNumber }

@@ -1,9 +1,9 @@
 {
-  "name": "call-number",
-  "version": "1.0.4",
-  "description": "Call Number from Cordova Application",
+  "name": "cordova-plugin-os-call-number",
+  "version": "1.0.0",
+  "description": "Call Number Plugin for Cordova Apps",
   "cordova": {
-    "id": "call-number",
+    "id": "cordova-plugin-os-call-number",
     "platforms": [
       "ios",
       "android"
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rohfosho/CordovaCallNumberPlugin.git"
+    "url": "git+https://github.com/oneserve/CordovaCallNumberPlugin.git"
   },
   "keywords": [
     "cordova",
@@ -20,12 +20,14 @@
     "phonegap",
     "ecosystem:cordova",
     "cordova-ios",
-    "cordova-android"
+    "cordova-android",
+    "ionic"
   ],
   "author": "",
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/Rohfosho/CordovaCallNumberPlugin/issues"
+    "url": "https://github.com/oneserve/CordovaCallNumberPlugin/issues"
   },
-  "homepage": "https://github.com/Rohfosho/CordovaCallNumberPlugin#readme"
+  "homepage": "https://github.com/oneserve/CordovaCallNumberPlugin#readme",
+  "module": "index.js"
 }

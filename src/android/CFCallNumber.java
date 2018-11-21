@@ -1,4 +1,4 @@
-package com.rohithvaranasi.callnumber;
+package com.oneserve.callnumber;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -40,11 +40,9 @@ public class CFCallNumber extends CordovaPlugin {
       }
     } else if (action.equals("isCallSupported")) {
         this.callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, isTelephonyEnabled()));
-    } else {
-      return false;
     }
 
-    return true;
+    callbackContext.error("No matching method available");
   }
 
   public void onRequestPermissionResult(int requestCode, String[] permissions,
