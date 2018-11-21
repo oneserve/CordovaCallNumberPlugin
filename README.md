@@ -7,13 +7,13 @@ Install the plugin using:
 
 
 ``` 
-npm install cordova-plugin-os-call-number
+cordova plugin add cordova-plugin-os-call-number --save
 ```
 
-or
+or if you use Ionic
 
 ```
-yarn add cordova-plugin-os-call-number
+ionic cordova plugin add cordova-plugin-os-call-number
 ```
 
 Use the plugin in your JS file:
