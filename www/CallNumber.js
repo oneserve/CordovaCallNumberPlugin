@@ -1,7 +1,7 @@
 var CallNumber = function(){};
 
 CallNumber.prototype.callNumber = function(number, bypassAppChooser) {
-    return new Promise(function() {
+    return new Promise(function(resolve, reject) {
         cordova.exec(resolve, reject, "CallNumber", "callNumber", [number, bypassAppChooser]);
     });
 };
