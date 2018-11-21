@@ -38,11 +38,14 @@ public class CFCallNumber extends CordovaPlugin {
       } else {
         getCallPermission(CALL_REQ_CODE);
       }
+      return true;
     } else if (action.equals("isCallSupported")) {
-        this.callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, isTelephonyEnabled()));
+      this.callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, isTelephonyEnabled()));
+      return true;
     }
 
     callbackContext.error("No matching method available");
+    return false;
   }
 
   public void onRequestPermissionResult(int requestCode, String[] permissions,
