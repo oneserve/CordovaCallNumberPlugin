@@ -36,7 +36,7 @@
               <param name="android-package" value="com.oneserve.callnumber.CFCallNumber"/>
           </feature>
       </config-file>
-      <config-file target="AndroidManifest.xml" parent="/manifest/application">
+      <config-file target="AndroidManifest.xml" parent="/manifest">
           <uses-permission android:name="android.permission.CALL_PHONE"/>
           <uses-feature android:name="android.hardware.telephony" android:required="false" />
       </config-file>
