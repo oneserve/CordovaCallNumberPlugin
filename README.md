@@ -7,18 +7,24 @@ Install the plugin using:
 
 
 ``` 
-npm install call-number
+npm install cordova-plugin-os-call-number
 ```
 
 or
 
 ```
-yarn add call-number
+yarn add cordova-plugin-os-call-number
 ```
 
 Use the plugin in your JS file:
 ``` javascript
 window.plugins.CallNumber.callNumber(onSuccess, onError, number, bypassAppChooser);
+```
+Or by importing it as a Module
+``` javascript
+import { CallNumber } from 'cordova-plugin-os-call-number';
+
+CallNumber.callNumber(onSuccess, onError, number, bypassAppChooser);
 ```
 
 **number:** *String;* phone number to call (e.g. "1234567890")
@@ -28,7 +34,7 @@ window.plugins.CallNumber.callNumber(onSuccess, onError, number, bypassAppChoose
 Make sure to create onSuccess and onError call back functions.
 
 Example:
-``` java
+``` javascript
 function onSuccess(result){
   console.log("Success:"+result);
 }
