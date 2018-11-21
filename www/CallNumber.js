@@ -23,4 +23,4 @@ cordova.addConstructor(function() {
     window.plugins.CallNumber = new CallNumber();
 });
 
-export { CallNumber }
+module.exports = { CallNumber };
